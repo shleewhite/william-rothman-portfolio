@@ -1,7 +1,19 @@
-{{page-title "WilliamRothmanPortfolio"}}
+{{page-title "William Rothman"}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<header>
+  <NavigationNarrator />
+  <h1>William Rothman</h1>
+  <nav>
+    <ul>
+      <li><LinkTo @route="index">Home</LinkTo></li>
+      <li><LinkTo @route="resume">Resume</LinkTo></li>
+      <li><LinkTo @route="portfolio">Portfolio</LinkTo></li>
+    </ul>
+  </nav>
+</header>
 
-{{outlet}}
+<main id="main">
+  {{outlet}}
+</main>
+
+<footer></footer>
