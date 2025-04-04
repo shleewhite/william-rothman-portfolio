@@ -216,10 +216,16 @@ footer p {
   margin-left: 0.25rem;
 }
 
+.carousel-media {
+  display: flex;
+  gap: 2rem;
+}
+
 .carousel-container img {
   margin-right: auto;
   margin-left: auto;
-  max-height: 80vh;
+  max-height: 75vh;
+  max-width: calc(50vw - 1rem);
 }
 
 @media (width < 64rem) {
