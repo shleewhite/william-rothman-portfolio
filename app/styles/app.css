@@ -67,7 +67,6 @@ h6 {
 
 header {
   padding-block: 1.25rem;
-  padding-inline: 7rem;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1.5rem;
@@ -105,7 +104,6 @@ hr {
 footer {
   background-color: rgb(240 240 240);
   padding-block: 2.5rem;
-  padding-inline: 7rem;
   display: flex;
   gap: 0.75rem;
   justify-content: space-between;
@@ -131,13 +129,12 @@ footer p {
 }
 
 .ember-application {
-  height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
 .page-layout {
-  padding-inline: 7rem;
   max-width: 120ch;
   margin-block-end: 2rem;
 }
@@ -156,7 +153,6 @@ footer p {
   background: rgb(2 0 36);
   background-color: rgb(35 44 51);
   color: white;
-  padding-inline: 7rem;
   padding-block: 2em;
   height: 100%;
   display: flex;
@@ -164,11 +160,7 @@ footer p {
 }
 
 .index-hero p {
-  line-height: 3rem;
-  font-size: 3rem;
   margin-bottom: 0;
-  max-width: 25ch;
-  vertical-align: middle;
 }
 
 .carousel-container {
@@ -190,6 +182,7 @@ footer p {
   justify-content: center;
   gap: 1rem;
   padding: 0.5rem;
+  max-width: 100vw;
 }
 
 .carousel-button {
@@ -227,4 +220,49 @@ footer p {
   margin-right: auto;
   margin-left: auto;
   max-height: 80vh;
+}
+
+@media (width < 64rem) {
+  .page-layout,
+  header,
+  footer,
+  .index-hero {
+    padding-inline: 2rem;
+  }
+
+  .index-hero p {
+    line-height: 2.25rem;
+    font-size: 2.25rem;
+    max-width: 20ch;
+  }
+}
+
+@media (64rem < width < 75rem) {
+  .page-layout,
+  header,
+  footer,
+  .index-hero {
+    padding-inline: 4rem;
+  }
+
+  .index-hero p {
+    line-height: 3rem;
+    font-size: 3rem;
+    max-width: 22ch;
+  }
+}
+
+@media (75rem < width) {
+  .page-layout,
+  header,
+  footer,
+  .index-hero {
+    padding-inline: 7rem;
+  }
+
+  .index-hero p {
+    line-height: 3rem;
+    font-size: 3rem;
+    max-width: 25ch;
+  }
 }
