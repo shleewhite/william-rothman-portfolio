@@ -30,17 +30,23 @@ export default class PortfolioCarousel extends Component {
             {{on 'click' this.previousButtonPress}}
           >
             <svg
-              aria-hidden='true'
-              fill='currentColor'
+              width='24'
+              height='24'
               viewBox='0 0 24 24'
+              fill='none'
               xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M15.79 18.77a.75.75 0 00-.02-1.06L9.832 12l5.938-5.71a.75.75 0 10-1.04-1.08l-6.5 6.25a.75.75 0 000 1.08l6.5 6.25a.75.75 0 001.06-.02z'
-                clip-rule='evenodd'
-              />
-            </svg>
+              stroke='#151515'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='arrow-left'
+            ><path d='M9 20L1 12L9 4' fill='none'></path><line
+                x1='1'
+                y1='12'
+                x2='17'
+                y2='12'
+                fill='none'
+              ></line></svg>
           </button>
           <button
             class='carousel-button'
@@ -48,17 +54,24 @@ export default class PortfolioCarousel extends Component {
             {{on 'click' this.nextButtonPress}}
           >
             <svg
-              aria-hidden='true'
-              fill='currentColor'
+              width='24'
+              height='24'
               viewBox='0 0 24 24'
+              fill='none'
               xmlns='http://www.w3.org/2000/svg'
-            >
-              <path
-                fill-rule='evenodd'
-                d='M8.21 18.77a.75.75 0 01.02-1.06L14.168 12 8.23 6.29a.75.75 0 111.04-1.08l6.5 6.25a.75.75 0 010 1.08l-6.5 6.25a.75.75 0 01-1.06-.02z'
-                clip-rule='evenodd'
-              />
-            </svg>
+              stroke='#151515'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              class='arrow-right'
+            ><path d='M15 20L23 12L15 4' fill='none'></path><line
+                x1='1'
+                y1='-1'
+                x2='17'
+                y2='-1'
+                transform='matrix(-1 0 0 1 24 13)'
+                fill='none'
+              ></line></svg>
           </button>
         </div>
       </div>
