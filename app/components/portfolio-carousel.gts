@@ -18,6 +18,10 @@ export default class PortfolioCarousel extends Component {
   }
 
   <template>
+    <div class='sr-only'>
+      Slide images do not have alt text due to quantity of text. See full
+      version for a PDF of all the slides.
+    </div>
     <div class='carousel-container'>
       <div class='carousel-media'>
         <img src='/portfolio-parts/{{this.currentSlide}}.png' alt='' />
@@ -27,6 +31,7 @@ export default class PortfolioCarousel extends Component {
           <button
             class='carousel-button'
             type='button'
+            aria-label='Previous slide'
             {{on 'click' this.previousButtonPress}}
           >
             <svg
@@ -51,6 +56,7 @@ export default class PortfolioCarousel extends Component {
           <button
             class='carousel-button'
             type='button'
+            aria-label='Next slide'
             {{on 'click' this.nextButtonPress}}
           >
             <svg
