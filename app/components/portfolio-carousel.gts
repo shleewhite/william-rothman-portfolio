@@ -64,12 +64,12 @@ export default class PortfolioCarousel extends Component {
     <div class='carousel-container'>
       <div class='carousel-media'>
         <img
-          src='/portfolio-parts/{{this.currentSlide}}.png'
+          src='/assets/images/portfolio-parts/{{this.currentSlide}}.png'
           alt={{this.currentSlideAltText}}
         />
         {{#if (and (gt this.currentSlide 1) (lt this.currentSlide 20))}}
           <img
-            src='/portfolio-parts/{{this.secondSlide}}.png'
+            src='/assets/images/portfolio-parts/{{this.secondSlide}}.png'
             alt={{this.secondSlideAltText}}
           />
         {{/if}}

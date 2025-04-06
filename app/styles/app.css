@@ -216,11 +216,6 @@ footer p {
   margin-left: 0.25rem;
 }
 
-.carousel-media {
-  display: flex;
-  gap: 2rem;
-}
-
 .carousel-container img {
   margin-right: auto;
   margin-left: auto;
@@ -241,6 +236,12 @@ footer p {
     font-size: 2.25rem;
     max-width: 20ch;
   }
+
+  .carousel-media {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 @media (64rem < width < 75rem) {
@@ -256,6 +257,11 @@ footer p {
     font-size: 3rem;
     max-width: 22ch;
   }
+
+  .carousel-media {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 @media (75rem < width) {
@@ -270,5 +276,10 @@ footer p {
     line-height: 3rem;
     font-size: 3rem;
     max-width: 25ch;
+  }
+
+  .carousel-media {
+    display: flex;
+    gap: 2rem;
   }
 }
