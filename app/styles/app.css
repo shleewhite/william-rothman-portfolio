@@ -270,6 +270,10 @@ footer p {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
   }
+
+  header nav {
+    justify-self: end;
+  }
 }
 
 @media (75rem < width) {
