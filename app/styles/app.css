@@ -2,10 +2,12 @@
 
 /* source: https://www.joshwcomeau.com/css/custom-css-reset/ */
 
+@import url("./outfit.css");
+
 :root {
   --system-ui:
-    system-ui, "Segoe UI", roboto, helvetica, arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    outfit-variable, system-ui, "Segoe UI", roboto, helvetica, arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 *,
@@ -146,16 +148,38 @@ footer p {
 }
 
 .index-hero {
-  background: rgb(2 0 36);
-  background-color: rgb(35 44 51);
-  color: white;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: rgb(255 252 246);
+  color: rgb(35 44 51);
   padding-block: 2em;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
+.index-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgb(198 68 42 / 16%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(198 68 42 / 16%) 1px, transparent 1px),
+    linear-gradient(rgb(198 68 42 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(198 68 42 / 7%) 1px, transparent 1px);
+  background-size:
+    6rem 6rem,
+    6rem 6rem,
+    1.5rem 1.5rem,
+    1.5rem 1.5rem;
+  mask-image: linear-gradient(135deg, black 0%, black 48%, transparent 88%);
+}
+
 .index-hero p {
+  position: relative;
+  z-index: 1;
   margin-bottom: 0;
 }
 
